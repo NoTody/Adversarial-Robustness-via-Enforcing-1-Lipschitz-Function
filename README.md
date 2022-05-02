@@ -26,3 +26,5 @@ This will create tensorboard file where you can monitor the training schedule. I
 ```
 tensorboard --logdir=./runs
 ```
+## Correspondence
+Haoxu Huang (hh2740@nyu.edu), Jiraphon Yenphraphai (jy3694@nyu.edu), Haozhen Bo (hb2432@nyu.edu)
