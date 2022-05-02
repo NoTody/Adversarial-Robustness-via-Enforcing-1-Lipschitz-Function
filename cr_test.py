@@ -13,7 +13,7 @@ def create_model():
     model.maxpool = nn.Identity()
     return model
 
-# pytorch moduel for ensembling models
+# pytorch module for ensembling models
 class EnsembledModels(nn.Module):
     def __init__(self, models):
       super(EnsembledModels, self).__init__()
@@ -34,9 +34,6 @@ def main(hparams):
     Main training routine specific for this project
     :param hparams:
     """
-    # ------------------------
-    # 1 INIT LIGHTNING MODEL
-    # ------------------------
     backbone_lst = []
     if hparams.backbone_model == 'WResNet':
         load_path_lst = hparams.load_path.split(', ')
