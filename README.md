@@ -10,7 +10,7 @@ For important changes to make to run the code, please check Dependencies.txt fil
 ## To train our proposed method with Spectral Normalization and Stochastic Weights Averaging
 The below command run with 2 gpus, 256 batch size, 8 workers, 200 epochs, sgd optimizer, Jenson Shannon loss, WResNet34-10 as backbone, learning rate 0.1, multi-step scheduler while using Spectral Normalization and Stochastic Weights Averaging
 ```
-python cr_train.py --batch_size 256 --num_workers 8 --max_epochs 200 --gpus 2 --optimizer "sgd" --loss_func "JS" --backbone_model "WResNet" --lr 0.1 --scheduler "mul    tistep" --use_sn --use_swa --runpath "./runs" --model_dir "JS_sn_swa"
+python cr_train.py --batch_size 256 --num_workers 8 --max_epochs 200 --gpus 2 --optimizer "sgd" --loss_func "JS" --backbone_model "WResNet" --lr 0.1 --scheduler "multistep" --use_sn --use_swa --runpath "./runs" --model_dir "JS_sn_swa"
 ```
 For more argument settings, please check argument parser help and our detailed argument setup at cr_train.py and cr_pl.py
 
