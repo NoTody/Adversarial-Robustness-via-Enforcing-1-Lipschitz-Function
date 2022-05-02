@@ -1,0 +1,27 @@
+pip install git+https://github.com/RobustBench/robustbench.git
+
+pip install torchtext
+
+pip install pytorch-lightning
+
+pip install advertorch
+
+pip install lightning-bolts
+
+pip install vit-pytorch
+
+pip install transformers
+
+Add:
+{
+def zero_gradients(x):
+    if isinstance(x, torch.Tensor):
+        if x.grad is not None:
+            x.grad.detach_()
+            x.grad.zero_()
+    elif isinstance(x, collections.abc.Iterable):
+        for elem in x:
+            zero_gradients(elem)
+}
+in "torch.autograd.gradcheck" from local installed package path
+if newest pytorch version used
