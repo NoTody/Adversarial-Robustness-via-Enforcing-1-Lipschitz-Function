@@ -9,13 +9,4 @@
 . /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh
 conda activate opence_env_1.5.1
 
-#python cr_test.py --num_examples 1000 --num_workers 8 --gpus 1 --backbone_model "WResNet" --load_path1 "./runs/MIN_swa/epoch=200-step=19698.ckpt"
-
-#python cr_train.py --batch_size 128 --num_workers 8 --max_epochs 200 --gpus 4 --optimizer "sgd" --loss_func "MIN" --backbone_model "WResNet" --lr 0.1 --scheduler "multistep" --use_swa --use_sn --model_dir "HMIN_swa_sn_final"
-
 python cr_train.py --batch_size 256 --num_workers 8 --max_epochs 90 --gpus 2 --optimizer "sgd" --loss_func "JS" --backbone_model "WResNet" --lr 0.1 --scheduler "multistep" --use_sn --use_swa --model_dir "JS_sn_swa_512_0.05lr_v2"
-
-#python cr_train.py --batch_size 64 --num_workers 8 --max_epochs 200 --gpus 2 --optimizer "sgd" --lam 2.0 --cov_coeff 0.1 --extra_reg "cov" --loss_func "JS" --backbone_model "WResNet" --lr 0.1 --scheduler "multistep"
-
-#python cr_train.py --batch_size 32 --num_workers 8 --max_epochs 200 --gpus 2 --optimizer "sgd" --lam 1.0 --loss_func "JS" --backbone_model "ViT" --lr 1e-4 --scheduler "cosine"
-
